@@ -20,12 +20,12 @@
   --primary:#D97706;--primary-dk:#B45309;--primary-lt:#FEF3C7;
   --danger:#DC2626;--danger-dk:#991B1B;--danger-lt:#FEE2E2;
   --dark:#111827;--dark2:#1F2937;--dark3:#374151;
-  --gray:#6B7280;--lgray:#9CA3AF;--border:#E5E7EB;
+  --gray:#6B7280;--lgray:#6B7280;--border:#E5E7EB;
   --bg:#FFFBEB;--white:#FFFFFF;
   --radius:12px;--radius-lg:20px;
   --shadow:0 4px 24px rgba(217,119,6,.12);
   --shadow-lg:0 8px 40px rgba(217,119,6,.22);
-  --wa:#25D366;--wa-dk:#128C7E;
+  --wa:#0F7D3D;--wa-dk:#0B5C2D;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
@@ -68,7 +68,7 @@ img{max-width:100%;height:auto;display:block}
 .hdr-btn-wa:hover{background:var(--wa-dk)}
 .breadcrumb{padding:11px 0;font-size:.82rem;color:rgba(255,255,255,.5);background:var(--dark2)}
 .breadcrumb .container{display:flex;gap:6px;align-items:center}
-.breadcrumb a{color:var(--primary)}
+.breadcrumb a{color:var(--primary);text-decoration:underline}
 /* HERO */
 #hero{background:linear-gradient(135deg,#111827 0%,#1F2937 55%,#374151 100%);color:#fff;padding:78px 0 70px;position:relative;overflow:hidden}
 #hero::before{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D97706' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4z'/%3E%3C/g%3E%3C/svg%3E")}
@@ -181,9 +181,9 @@ img{max-width:100%;height:auto;display:block}
 footer{background:#0D1117;color:rgba(255,255,255,.65);padding:40px 0 22px}
 .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:28px;margin-bottom:28px}
 .footer-brand p{font-size:.83rem;margin-top:10px}
-footer h4{color:var(--primary);font-size:.9rem;margin-bottom:10px}
+footer h3{color:var(--primary);font-size:.9rem;margin-bottom:10px}
 footer ul{list-style:none;display:flex;flex-direction:column;gap:7px}
-footer ul li a{font-size:.82rem;color:rgba(255,255,255,.5);transition:.2s}
+footer ul li a{font-size:.82rem;color:rgba(255,255,255,.5);transition:.2s;text-decoration:underline;text-decoration-color:rgba(255,255,255,.25)}
 footer ul li a:hover{color:var(--primary)}
 .footer-copy{border-top:1px solid rgba(255,255,255,.08);padding-top:18px;text-align:center;font-size:.78rem}
 @media(max-width:768px){
@@ -225,10 +225,11 @@ footer ul li a:hover{color:var(--primary)}
 <header id="site-header"><div class="container"><div class="header-inner">
   <a href="https://listrik24.com" class="logo"><div class="logo-icon">⚡</div>Listrik24 Jam</a>
   <div class="hdr-btns">
-    <a href="https://wa.me/6285137396984?text=DARURAT%21%20Butuh%20tukang%20listrik%20segera%20di%20Cirebon%21" target="_blank" rel="noopener" class="hdr-btn-danger">⚡ Darurat</a>
-    <a href="https://wa.me/6285137396984?text=Halo%20Listrik24%20Jam%2C%20saya%20butuh%20tukang%20listrik%20di%20Cirebon" target="_blank" rel="noopener" class="hdr-btn-wa"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.552 4.116 1.52 5.849L.057 23.881a.5.5 0 00.611.611l6.032-1.463A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.948 0-3.773-.527-5.335-1.444l-.381-.228-3.949.958.977-3.83-.25-.397A9.961 9.961 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> WA</a>
+    <a href="https://wa.me/6285137396984?text=DARURAT%21%20Butuh%20tukang%20listrik%20segera%20di%20Cirebon%21" target="_blank" rel="noopener" class="hdr-btn-danger" aria-label="Hubungi Listrik24 Jam untuk darurat listrik">⚡ Darurat</a>
+    <a href="https://wa.me/6285137396984?text=Halo%20Listrik24%20Jam%2C%20saya%20butuh%20tukang%20listrik%20di%20Cirebon" target="_blank" rel="noopener" class="hdr-btn-wa" aria-label="Chat WhatsApp Listrik24 Jam"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.552 4.116 1.52 5.849L.057 23.881a.5.5 0 00.611.611l6.032-1.463A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.948 0-3.773-.527-5.335-1.444l-.381-.228-3.949.958.977-3.83-.25-.397A9.961 9.961 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> WA</a>
   </div>
 </div></div></header>
+<main>
 <section id="hero" style="padding:60px 0 50px">
   <div class="container" style="text-align:center;position:relative">
     <div class="badge badge-danger" style="margin:0 auto 14px">⚡ DARURAT 24 JAM</div>
@@ -560,11 +561,12 @@ footer ul li a:hover{color:var(--primary)}
     </div>
   </div>
 </section>
+</main>
 <footer><div class="container">
   <div class="footer-inner">
     <div class="footer-brand"><div class="logo"><div class="logo-icon">⚡</div>Listrik24 Jam</div><p>Tukang listrik profesional 24 jam se-Cirebon. Teknisi bersertifikat, garansi 30 hari, sejak 2015.</p></div>
-    <div><h4>Kecamatan</h4><ul><li><a href="https://listrik24.com/tukang-listrik-arjawinangun-cirebon.html">Arjawinangun</a></li><li><a href="https://listrik24.com/tukang-listrik-astanajapura-cirebon.html">Astanajapura</a></li><li><a href="https://listrik24.com/tukang-listrik-babakan-cirebon.html">Babakan</a></li><li><a href="https://listrik24.com/tukang-listrik-beber-cirebon.html">Beber</a></li><li><a href="https://listrik24.com/tukang-listrik-ciledug-cirebon.html">Ciledug</a></li><li><a href="https://listrik24.com/tukang-listrik-ciwaringin-cirebon.html">Ciwaringin</a></li></ul></div>
-    <div><h4>Layanan</h4><ul><li><a href="https://wa.me/6285137396984?text=DARURAT%21%20Butuh%20tukang%20listrik%20segera%20di%20Cirebon%21">Darurat 24 Jam</a></li><li><a href="https://wa.me/6285137396984?text=Halo%20Listrik24%20Jam%2C%20saya%20butuh%20tukang%20listrik%20di%20Cirebon">Instalasi Listrik</a></li><li><a href="https://wa.me/6285137396984?text=Halo%20Listrik24%20Jam%2C%20saya%20butuh%20tukang%20listrik%20di%20Cirebon">Panel &amp; MCB</a></li><li><a href="https://wa.me/6285137396984?text=Halo%20Listrik24%20Jam%2C%20saya%20butuh%20tukang%20listrik%20di%20Cirebon">Tambah Daya PLN</a></li></ul></div>
+    <div><h3>Kecamatan</h3><ul><li><a href="https://listrik24.com/tukang-listrik-arjawinangun-cirebon.html">Arjawinangun</a></li><li><a href="https://listrik24.com/tukang-listrik-astanajapura-cirebon.html">Astanajapura</a></li><li><a href="https://listrik24.com/tukang-listrik-babakan-cirebon.html">Babakan</a></li><li><a href="https://listrik24.com/tukang-listrik-beber-cirebon.html">Beber</a></li><li><a href="https://listrik24.com/tukang-listrik-ciledug-cirebon.html">Ciledug</a></li><li><a href="https://listrik24.com/tukang-listrik-ciwaringin-cirebon.html">Ciwaringin</a></li></ul></div>
+    <div><h3>Layanan</h3><ul><li><a href="https://wa.me/6285137396984?text=DARURAT%21%20Butuh%20tukang%20listrik%20segera%20di%20Cirebon%21">Darurat 24 Jam</a></li><li><a href="https://wa.me/6285137396984?text=Halo%20Listrik24%20Jam%2C%20saya%20butuh%20tukang%20listrik%20di%20Cirebon">Instalasi Listrik</a></li><li><a href="https://wa.me/6285137396984?text=Halo%20Listrik24%20Jam%2C%20saya%20butuh%20tukang%20listrik%20di%20Cirebon">Panel &amp; MCB</a></li><li><a href="https://wa.me/6285137396984?text=Halo%20Listrik24%20Jam%2C%20saya%20butuh%20tukang%20listrik%20di%20Cirebon">Tambah Daya PLN</a></li></ul></div>
   </div>
   <div class="footer-copy"><p>&copy; 2026 Listrik24 Jam &middot; Tukang Listrik Cirebon</p></div>
 </div></footer>
